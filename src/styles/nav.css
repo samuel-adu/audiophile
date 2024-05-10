@@ -1,0 +1,33 @@
+.nav-container {
+  background-color: var(--clr-black-100);
+}
+
+.nav {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--spacing-s);
+}
+
+.nav-list {
+  display: none;
+}
+
+.nav-item {
+  font-size: var(--text-s);
+  text-transform: uppercase;
+  color: var(--clr-neutral-400);
+}
+
+@media (min-width: 1024px) {
+  .nav-list {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}

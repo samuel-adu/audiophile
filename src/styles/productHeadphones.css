@@ -1,0 +1,37 @@
+.hero-section {
+  margin-bottom: var(--spacing-l);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 510px;
+}
+
+.hero-image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.hero-section .overline {
+  color: var(--clr-neutral-400);
+}
+
+.hero-text {
+  text-align: center;
+  color: var(--clr-neutral-100);
+  max-width: 400px;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 1024px) {
+  .hero-section {
+    margin-bottom: 30rem;
+    justify-content: left;
+  }
+
+  .hero-text {
+    text-align: left;
+  }
+}
