@@ -7,10 +7,18 @@ import '../styles/productHeadphones.css';
 function ProductHeadphones() {
   return (
     <div className="hero-section">
-      <div className="hero-text">
-        <p className="overline">new product</p>
-        <h1 className="heading-1">xx99 mark ii headphones</h1>
-        <p>
+      <div className="hero-image">
+        <picture>
+          <source media="(min-width: 1024px)" srcSet={heroDesktop} />
+          <source media="(min-width: 640px)" srcSet={heroTablet} />
+          <img src={hero} alt="" />
+        </picture>
+      </div>
+
+      <div className="hero-content">
+        <p className="overline-text">new product</p>
+        <h1 className="hero-heading">xx99 mark ii headphones</h1>
+        <p className="hero-text">
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
@@ -19,12 +27,6 @@ function ProductHeadphones() {
           see product
         </Link>
       </div>
-
-      <picture className="hero-image">
-        <source media="(min-width: 1024px)" srcSet={heroDesktop} />
-        <source media="(min-width: 768px)" srcSet={heroTablet} />
-        <img src={hero} alt="" />
-      </picture>
     </div>
   );
 }

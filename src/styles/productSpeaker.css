@@ -1,7 +1,117 @@
 .speaker-zx9 {
   background-color: var(--clr-primary-400);
+  background-image: url('../assets/shared/pattern-circles.svg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  padding: var(--spacing-m) var(--spacing-base);
+  border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: var(--spacing-base);
+  margin-bottom: var(--spacing-base);
+}
+
+.speaker-zx9-image {
+  width: 60%;
+}
+
+.speaker-zx9-desc {
+  color: var(--clr-neutral-100);
+  text-align: center;
+}
+
+.speaker-zx9 .text {
+  margin-bottom: var(--spacing-base);
+}
+
+.speaker-zx9 .heading {
+  font-size: var(--heading-1);
+  font-weight: var(--fw-bold);
+  line-height: 40px;
+  letter-spacing: 1.29px;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-base);
+}
+
+.speaker-zx7 {
+  position: relative;
+  margin-bottom: var(--spacing-base);
+}
+
+.speaker-zx7-image {
+  border-radius: 0.5rem;
+}
+
+.speaker-zx7-desc {
+  position: absolute;
+  top: 50%;
+  left: var(--spacing-base);
+  transform: translateY(-50%);
+}
+
+.speaker-zx7 .heading {
+  font-size: 1.75rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-base);
+}
+
+@media (min-width: 640px) {
+  .speaker-zx9 {
+    margin-bottom: var(--spacing-base);
+  }
+
+  .speaker-zx9-desc {
+    width: 50%;
+  }
+
+  .speaker-zx9 .heading {
+    line-height: 58px;
+    letter-spacing: 2px;
+  }
+
+  .speaker-zx9-image {
+    width: 30%;
+  }
+
+  .speaker-zx7 {
+    margin-bottom: var(--spacing-base);
+  }
+
+  .speaker-zx7-desc {
+    left: var(--spacing-s);
+  }
+}
+
+@media (min-width: 1024px) {
+  .speaker-zx9 {
+    padding-inline: var(--spacing-l);
+    flex-direction: row;
+    gap: var(--spacing-l);
+    overflow: hidden;
+    margin-bottom: var(--spacing-s);
+  }
+
+  .speaker-zx9-desc {
+    text-align: left;
+    width: 100%;
+  }
+
+  .speaker-zx9-image {
+    width: 100%;
+    position: relative;
+    bottom: -4.5rem;
+  }
+
+  .speaker-zx7 {
+    margin-bottom: var(--spacing-s);
+  }
+
+  .speaker-zx7-desc {
+    left: var(--spacing-l);
+  }
 }

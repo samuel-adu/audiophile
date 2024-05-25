@@ -1,24 +1,29 @@
-.nav-container {
-  background-color: var(--clr-black-100);
-}
-
 .nav {
+  /* background-color: var(--clr-black-400); */
   position: relative;
   z-index: 10;
+}
+
+.navbar {
+  border-bottom: 1px solid #979797;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-block: var(--spacing-s);
+  padding-block: 2rem;
 }
 
 .nav-list {
   display: none;
 }
 
-.nav-item {
+.nav-link {
   font-size: var(--text-s);
   text-transform: uppercase;
   color: var(--clr-neutral-400);
+}
+
+.nav-link:hover {
+  color: var(--clr-primary-400);
 }
 
 @media (min-width: 1024px) {

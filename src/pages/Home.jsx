@@ -1,18 +1,19 @@
 /* eslint-disable react/no-unescaped-entities */
-import About from '../components/About';
+import '../styles/home.css';
 import ProductHeadphones from '../components/ProductHeadphones';
 import ProductSpeaker from '../components/ProductSpeaker';
-import '../styles/home.css';
+import ProductEarphones from '../components/ProductEarphones';
+// import Header from '../components/Header';
 
 function Home() {
   return (
-    <main>
-      <div className="container">
-        <ProductHeadphones />
+    <>
+      <ProductHeadphones />
+      <main className="container main-section">
         <ProductSpeaker />
-        <About />
-      </div>
-    </main>
+        <ProductEarphones />
+      </main>
+    </>
   );
 }
 

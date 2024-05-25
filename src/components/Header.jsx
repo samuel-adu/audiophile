@@ -1,14 +1,8 @@
-import Nav from './Nav';
+/* eslint-disable react/prop-types */
 import '../styles/header.css';
 
-function Header() {
-  return (
-    <header>
-      <div className="container">
-        <Nav />
-      </div>
-    </header>
-  );
+function Header({ children }) {
+  return <header>{children}</header>;
 }
 
 export default Header;

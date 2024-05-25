@@ -5,7 +5,7 @@ import '../styles/about.css';
 
 function About() {
   return (
-    <div className="about-section ">
+    <section className="about-section container">
       <picture className="about-image">
         <source
           media="(min-width: 1024px)"
@@ -13,16 +13,16 @@ function About() {
           className="model-image"
         />
         <source
-          media="(min-width: 768px)"
+          media="(min-width: 640px)"
           srcSet={bestGearModelTablet}
           className="model-image"
         />
         <img src={bestGearModel} alt="" className="model-image" />
       </picture>
 
-      <div className="about-main">
-        <h3 className="about-heading heading-2">
-          Bringing you the best audio gear
+      <div className="about-content">
+        <h3 className="about-heading">
+          Bringing you the <span>best</span> audio gear
         </h3>
 
         <p className="about-body">
@@ -34,7 +34,7 @@ function About() {
           best place to buy your portable audio equipment.
         </p>
       </div>
-    </div>
+    </section>
   );
 }
 

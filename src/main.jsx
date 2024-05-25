@@ -2,11 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Layout from './components/Layout';
 import Home from './pages/Home';
-import Speakers from './pages/Speakers';
+import ProductDetail from './pages/ProductDetail';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Headphones from './pages/Headphones';
-import Earphones from './pages/Earphones';
+import Category from './pages/Category';
 
 const router = createBrowserRouter([
   {
@@ -18,16 +17,12 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/speakers',
-        element: <Speakers />,
+        path: '/productdetail',
+        element: <ProductDetail />,
       },
       {
-        path: '/headphones',
-        element: <Headphones />,
-      },
-      {
-        path: '/earphones',
-        element: <Earphones />,
+        path: '/category',
+        element: <Category />,
       },
     ],
   },

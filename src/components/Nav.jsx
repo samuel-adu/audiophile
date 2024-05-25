@@ -6,26 +6,37 @@ import '../styles/nav.css';
 
 function Nav() {
   return (
-    <nav className="nav">
-      <img className="menu-toggle" src={hamburger} alt="" />
-      <img className="logo" src={logo} alt="" />
+    <nav className="nav container">
+      <div className="navbar">
+        <img className="menu-toggle" src={hamburger} alt="" />
 
-      <ul className="nav-list">
-        <NavLink to="/" className="nav-item">
-          Home
-        </NavLink>
-        <NavLink to="/headphones" className="nav-item">
-          Headphones
-        </NavLink>
-        <NavLink to="/speakers" className="nav-item">
-          Speakers
-        </NavLink>
-        <NavLink to="/earphones" className="nav-item">
-          Earphones
-        </NavLink>
-      </ul>
+        <img className="logo" src={logo} alt="" />
 
-      <img className="cart-icon" src={cart} alt="" />
+        <ul className="nav-list">
+          <li className='nav-item"'>
+            <NavLink to="/" className="nav-link">
+              Home
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink to="/category" className="nav-link">
+              Headphones
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink to="/category" className="nav-link">
+              Speakers
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink to="/category" className="nav-link">
+              Earphones
+            </NavLink>
+          </li>
+        </ul>
+
+        <img className="cart-icon" src={cart} alt="" />
+      </div>
     </nav>
   );
 }
