@@ -2,7 +2,11 @@
 import '../styles/header.css';
 
 function Header({ children }) {
-  return <header>{children}</header>;
+  return (
+    <header className="header">
+      <h2 className="heading">{children}</h2>
+    </header>
+  );
 }
 
 export default Header;

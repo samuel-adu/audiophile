@@ -1,0 +1,15 @@
+.product-card {
+  text-align: center;
+}
+
+.product-preview {
+  margin-bottom: var(--spacing-base);
+}
+
+.product-image {
+  border-radius: 0.5rem;
+}
+
+.product-desc {
+  margin-bottom: var(--spacing-base);
+}

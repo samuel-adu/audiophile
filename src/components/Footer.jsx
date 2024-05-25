@@ -19,18 +19,18 @@ function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="headphones" className="footer-link">
+              <Link to="category" className="footer-link">
                 Headphones
               </Link>
             </li>
             <li>
-              <Link to="speakers" className="footer-link">
+              <Link to="category" className="footer-link">
                 Speakers
               </Link>
             </li>
 
             <li>
-              <Link to="earphones" className="footer-link">
+              <Link to="category" className="footer-link">
                 Earphones
               </Link>
             </li>

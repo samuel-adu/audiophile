@@ -166,6 +166,7 @@ p {
 
 .btn--primary:hover {
   background-color: var(--clr-primary-100);
+  color: var(--clr-neutral-100);
 }
 
 .btn--secondary {
@@ -198,7 +199,7 @@ p {
   opacity: 0.5;
 }
 
-.btn--tetiary {
+.btn--tetiary:hover {
   color: var(--clr-primary-400);
 }
 
