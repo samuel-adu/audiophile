@@ -4,7 +4,7 @@ import '../styles/header.css';
 function Header({ children }) {
   return (
     <header className="header">
-      <h2 className="heading">{children}</h2>
+      <h2 className="heading-2 page-heading">{children}</h2>
     </header>
   );
 }

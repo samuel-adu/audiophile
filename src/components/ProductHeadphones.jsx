@@ -23,7 +23,7 @@ function ProductHeadphones() {
           for the passionate music enthusiast.
         </p>
 
-        <Link to="headphones" className="btn btn--primary">
+        <Link to="product" className="btn btn--primary">
           see product
         </Link>
       </div>

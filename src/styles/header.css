@@ -7,10 +7,7 @@ header {
   padding-block: var(--spacing-l) var(--spacing-s);
 }
 
-.heading {
-  font-size: var(--heading-2);
-  font-weight: var(--fw-bold);
+.page-heading {
+  color: var(--clr-neutral-100);
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
 }

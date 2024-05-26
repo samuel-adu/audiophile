@@ -19,17 +19,17 @@ function Nav() {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/category" className="nav-link">
+            <NavLink to="headphones" className="nav-link">
               Headphones
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/category" className="nav-link">
+            <NavLink to="speakers" className="nav-link">
               Speakers
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/category" className="nav-link">
+            <NavLink to="earphones" className="nav-link">
               Earphones
             </NavLink>
           </li>

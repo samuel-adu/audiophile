@@ -1,4 +1,4 @@
-.product-card {
+.product-card-content {
   text-align: center;
 }
 
@@ -12,4 +12,21 @@
 
 .product-desc {
   margin-bottom: var(--spacing-base);
+}
+
+.product-name {
+  color: var(--clr-black-400);
+}
+
+@media (min-width: 1024px) {
+  .product-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product-card-content {
+    text-align: left;
+    padding-left: 125px;
+  }
 }
