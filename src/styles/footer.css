@@ -94,4 +94,9 @@
   .footer-text {
     width: 51%;
   }
+
+  .social-list {
+    position: relative;
+    bottom: var(--spacing-l);
+  }
 }

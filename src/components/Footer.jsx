@@ -14,23 +14,23 @@ function Footer() {
           <img src={logo} alt="audiophile" className="footer-logo" />
           <ul className="footer-list">
             <li>
-              <Link to="/" className="footer-link">
+              <Link to={'/'} className="footer-link">
                 Home
               </Link>
             </li>
             <li>
-              <Link to="headphones" className="footer-link">
+              <Link to={'headphones'} className="footer-link">
                 Headphones
               </Link>
             </li>
             <li>
-              <Link to="speakers" className="footer-link">
+              <Link to={'speakers'} className="footer-link">
                 Speakers
               </Link>
             </li>
 
             <li>
-              <Link to="earphones" className="footer-link">
+              <Link to={'earphones'} className="footer-link">
                 Earphones
               </Link>
             </li>

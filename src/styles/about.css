@@ -10,14 +10,14 @@
 
 .about-heading {
   margin-bottom: 2rem;
-  font-size: var(--heading-2);
-  font-weight: var(--fw-bold);
-  letter-spacing: 1px;
-  text-transform: uppercase;
 }
 
 .about-heading > span {
   color: var(--clr-primary-400);
+}
+
+.about-body {
+  opacity: 0.5;
 }
 
 @media (min-width: 640px) {

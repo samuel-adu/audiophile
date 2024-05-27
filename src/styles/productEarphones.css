@@ -1,4 +1,4 @@
-.yx1 {
+.yx1-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,7 +10,7 @@
   border-radius: 0.5rem;
 }
 
-.yx1-desc {
+.yx1-content {
   background-color: var(--clr-neutral-400);
   padding: var(--spacing-m) var(--spacing-base);
   width: 100%;
@@ -21,7 +21,7 @@
   justify-content: center;
 }
 
-.yx1 .heading {
+.yx1-content .heading {
   font-size: 1.75rem;
   font-weight: var(--fw-bold);
   letter-spacing: 2px;
@@ -30,16 +30,16 @@
 }
 
 @media (min-width: 640px) {
-  .yx1 {
+  .yx1-section {
     flex-direction: row;
     align-items: unset;
   }
 
-  .yx1-preview {
+  .yx1-image {
     width: 50%;
   }
 
-  .yx1-desc {
+  .yx1-content {
     width: 50%;
   }
 }

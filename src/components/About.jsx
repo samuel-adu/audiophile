@@ -21,7 +21,7 @@ function About() {
       </picture>
 
       <div className="about-content">
-        <h3 className="about-heading">
+        <h3 className="about-heading heading-2">
           Bringing you the <span>best</span> audio gear
         </h3>
 

@@ -1,10 +1,10 @@
 .nav {
-  /* background-color: var(--clr-black-400); */
-  position: relative;
-  z-index: 10;
+  background-color: var(--clr-black-400);
 }
 
 .navbar {
+  position: relative;
+  z-index: 10;
   border-bottom: 1px solid #979797;
   display: flex;
   align-items: center;

@@ -23,7 +23,10 @@ function ProductHeadphones() {
           for the passionate music enthusiast.
         </p>
 
-        <Link to="product" className="btn btn--primary">
+        <Link
+          to="product/xx99-mark-two-headphones"
+          className="btn btn--primary"
+        >
           see product
         </Link>
       </div>

@@ -1,11 +1,13 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { getImageUrl } from '../utils/getImageUrl';
 import Menu from '../components/Menu';
+import OrderCount from '../components/OrderCount';
 import data from '../data.json';
 import '../styles/productDetail.css';
 
 function ProductDetail() {
-  const item = data.filter((item) => item.slug === 'xx99-mark-two-headphones');
+  const { product } = useParams();
+  const item = data.filter((item) => item.slug === product);
   const {
     image,
     name,
@@ -18,13 +20,13 @@ function ProductDetail() {
   } = item[0];
   return (
     <>
-      <main className="container product-detail">
-        <Link to="/" className="btn btn--tetiary">
+      <main className="container product-detail-section">
+        <Link to="/" className="back-btn">
           go back
         </Link>
 
         <section className="product-detail-card">
-          <div className="product-preview">
+          <div className="product-detail-image">
             <picture>
               <source
                 media="(min-width: 1024px)"
@@ -44,14 +46,17 @@ function ProductDetail() {
             </picture>
           </div>
 
-          <div className="product-desc">
+          <div className="product-detail-content">
             {item[0].new ? <p className="overline-text">new product</p> : ''}
             <h3 className="heading-3 product-name">{name}</h3>
             <p className="card-text">{description}</p>
 
             <p className="price">${price.toLocaleString()}</p>
 
-            <button className="btn btn--primary">add to cart</button>
+            <div className="order-tab">
+              <OrderCount />
+              <button className="btn btn--primary">add to cart</button>
+            </div>
           </div>
         </section>
 
@@ -75,45 +80,71 @@ function ProductDetail() {
         </div>
 
         <section className="gallery-section">
-          <picture>
-            <source
-              media="(min-width: 1024px)"
-              srcSet={getImageUrl(gallery.first.desktop)}
-            />
-            <source
-              media="(min-width: 640px)"
-              srcSet={getImageUrl(gallery.first.tablet)}
-            />
-            <img src={getImageUrl(gallery.first.mobile)} alt="" />
-          </picture>
+          <div className="flex flex-col gap-[var(--spacing-base)]">
+            <div className="gallery-first">
+              <picture>
+                <source
+                  media="(min-width: 1024px)"
+                  srcSet={getImageUrl(gallery.first.desktop)}
+                  className=""
+                />
+                <source
+                  media="(min-width: 640px)"
+                  srcSet={getImageUrl(gallery.first.tablet)}
+                  className=""
+                />
+                <img
+                  src={getImageUrl(gallery.first.mobile)}
+                  alt=""
+                  className=""
+                />
+              </picture>
+            </div>
 
-          <picture>
-            <source
-              media="(min-width: 1024px)"
-              srcSet={getImageUrl(gallery.second.desktop)}
-            />
-            <source
-              media="(min-width: 640px)"
-              srcSet={getImageUrl(gallery.second.tablet)}
-            />
-            <img src={getImageUrl(gallery.second.mobile)} alt="" />
-          </picture>
+            <div className="gallery-second">
+              <picture>
+                <source
+                  media="(min-width: 1024px)"
+                  srcSet={getImageUrl(gallery.second.desktop)}
+                  className=""
+                />
+                <source
+                  media="(min-width: 640px)"
+                  srcSet={getImageUrl(gallery.second.tablet)}
+                  className=""
+                />
+                <img
+                  src={getImageUrl(gallery.second.mobile)}
+                  alt=""
+                  className=""
+                />
+              </picture>
+            </div>
+          </div>
 
-          <picture>
-            <source
-              media="(min-width: 1024px)"
-              srcSet={getImageUrl(gallery.third.desktop)}
-            />
-            <source
-              media="(min-width: 640px)"
-              srcSet={getImageUrl(gallery.third.tablet)}
-            />
-            <img src={getImageUrl(gallery.third.mobile)} alt="" />
-          </picture>
+          <div className="gallery-third">
+            <picture>
+              <source
+                media="(min-width: 1024px)"
+                srcSet={getImageUrl(gallery.third.desktop)}
+                className=""
+              />
+              <source
+                media="(min-width: 640px)"
+                srcSet={getImageUrl(gallery.third.tablet)}
+                className=""
+              />
+              <img
+                src={getImageUrl(gallery.third.mobile)}
+                alt=""
+                className=""
+              />
+            </picture>
+          </div>
         </section>
 
         <section className="other-section">
-          <h3 className="heading-4">you may also like</h3>
+          <h3 className="heading-4 heading">you may also like</h3>
 
           <div className="other-items">
             {others.map((item, index) => (
@@ -136,7 +167,7 @@ function ProductDetail() {
                   />
                 </picture>
                 <p className="heading-5">{item.name}</p>
-                <Link to={item.slug} className="btn btn--primary">
+                <Link to={`/product/${item.slug}`} className="btn btn--primary">
                   see product
                 </Link>
               </div>

@@ -1,0 +1,35 @@
+.order-count-tab {
+  background-color: var(--clr-neutral-400);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 120px;
+}
+
+.order-count {
+  font-size: var(--text-xs);
+  font-weight: var(--fw-bold);
+  color: var(--clr-black-400);
+}
+
+.order-btn {
+  font-size: var(--text-xs);
+  font-weight: var(--fw-bold);
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 1rem;
+  transition: border-color 0.25s;
+  display: inline-block;
+}
+
+.order-btn {
+  color: var(--clr-black-400);
+  opacity: 0.25;
+}
+
+.order-btn:hover {
+  color: var(--clr-primary-400);
+}
