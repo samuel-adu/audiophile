@@ -1,0 +1,13 @@
+header {
+  background-color: var(--clr-black-400);
+  position: relative;
+  top: -90px;
+  left: 0;
+  width: 100%;
+  padding-block: var(--spacing-l) var(--spacing-s);
+}
+
+.page-heading {
+  color: var(--clr-neutral-100);
+  text-align: center;
+}

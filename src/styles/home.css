@@ -1,0 +1,9 @@
+.main-section {
+  margin-bottom: var(--spacing-l);
+}
+
+@media (min-width: 1024px) {
+  .main-section {
+    margin-bottom: var(--spacing-xl);
+  }
+}
