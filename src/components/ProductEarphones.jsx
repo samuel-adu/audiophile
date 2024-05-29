@@ -24,7 +24,7 @@ function ProductEarphones() {
       </div>
 
       <div className="yx1-content">
-        <p className="heading">YX1 earphones</p>
+        <p className="heading heading-4">YX1 earphones</p>
         <Link to={'product/yx1-earphones'} className="btn btn--secondary">
           See product
         </Link>

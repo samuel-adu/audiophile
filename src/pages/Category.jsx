@@ -7,6 +7,7 @@ import Menu from '../components/Menu';
 
 export default function Category() {
   let { category } = useParams();
+  // console.log(category);
 
   return (
     <>
