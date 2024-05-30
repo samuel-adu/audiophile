@@ -2,10 +2,12 @@
   text-align: center;
   margin-bottom: var(--spacing-l);
 }
+.about-image {
+  margin-bottom: 2rem;
+}
 
 .model-image {
   border-radius: 0.5rem;
-  margin-bottom: 2rem;
 }
 
 .about-heading {
@@ -22,7 +24,7 @@
 
 @media (min-width: 640px) {
   .about-content {
-    padding-inline: 2rem;
+    padding-inline: 58px;
   }
 }
 
@@ -32,11 +34,13 @@
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
-    gap: var(--spacing-l);
+    /* gap: var(--spacing-l); */
+    gap: 125px;
   }
 
   .about-image {
     width: 50%;
+    margin-bottom: 0;
   }
 
   .about-content {
@@ -46,6 +50,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: left;
-    padding-right: 1px;
+    padding-inline: 0;
   }
 }
