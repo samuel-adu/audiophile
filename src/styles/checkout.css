@@ -1,0 +1,7 @@
+.checkout-section {
+  position: relative;
+}
+
+.summary {
+  margin-bottom: var(--spacing-l);
+}

@@ -1,4 +1,4 @@
-header {
+.header {
   background-color: var(--clr-black-400);
   position: relative;
   top: -90px;

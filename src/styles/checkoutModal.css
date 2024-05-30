@@ -1,0 +1,127 @@
+.checkout-modal {
+  background-color: var(--clr-neutral-100);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  z-index: 100;
+  width: 327px;
+  border-radius: 0.5rem;
+}
+
+.check-div {
+  width: 64px;
+  height: 64px;
+  background-color: var(--clr-primary-400);
+  border-radius: 50%;
+  margin-bottom: var(--spacing-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-mark {
+  font-size: 1.5rem;
+  color: var(--clr-neutral-100);
+}
+
+.modal-heading {
+  margin-bottom: 1rem;
+}
+
+.modal-text {
+  margin-bottom: var(--spacing-s);
+  font-style: var(--fw-medium);
+}
+
+.checkout-modal__main {
+  margin-bottom: var(--spacing-base);
+}
+
+.checkout-modal__order-list {
+  background-color: var(--clr-neutral-400);
+  padding-inline: 2rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.checkout-modal__item {
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+  padding-block: 0.75rem;
+  border-bottom: 1px solid #979797;
+}
+
+.checkout-modal__item-image {
+  width: 32px;
+  height: 32px;
+  margin-right: 0.5rem;
+}
+
+.checkout-modal__item-desc {
+  margin-right: auto;
+}
+
+.checkout-modal__item-name {
+  font-weight: var(--fw-bold);
+}
+
+.checkout-modal__item-price {
+  opacity: 0.5;
+}
+
+.checkout-modal__quantity {
+  opacity: 0.5;
+  font-weight: var(--fw-bold);
+}
+
+.checkout-modal__others-div {
+  padding-block: 1rem;
+}
+
+.checkout-modal__other-items {
+  text-align: center;
+  opacity: 0.5;
+  font-weight: var(--fw-bold);
+}
+
+.checkout-modal__total {
+  background-color: var(--clr-black-400);
+  border-radius: 0 0 0.5rem 0.5rem;
+  padding: 1rem 1.5rem;
+}
+
+.grand-total {
+  color: var(--clr-neutral-100);
+  opacity: 0.5;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.grand-cost {
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-bold);
+  font-size: 1.125rem;
+}
+
+@media (min-width: 640px) {
+  .checkout-modal {
+    width: 540px;
+  }
+
+  .checkout-modal__main {
+    display: flex;
+  }
+
+  .checkout-modal__order-list {
+    width: 60%;
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+
+  .checkout-modal__total {
+    border-radius: 0 0.5rem 0.5rem 0;
+    width: 40%;
+    align-content: center;
+  }
+}

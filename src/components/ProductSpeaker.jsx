@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 function ProductSpeaker() {
   return (
-    <div>
+    <>
       <div className="zx9-section">
         <div className="zx9-image">
           <picture>
@@ -29,14 +29,14 @@ function ProductSpeaker() {
             truly remarkable sound.
           </p>
 
-          <Link to="product/zx9-speaker" className="btn btn--secondary-invert">
+          <Link to="speakers/zx9-speaker" className="btn btn--secondary-invert">
             See product
           </Link>
         </div>
       </div>
 
       <div className="zx7-section">
-        <div className="">
+        <div className="zx7-image">
           <picture className="zx7-image">
             <source
               media="(min-width: 1024px)"
@@ -53,13 +53,13 @@ function ProductSpeaker() {
         </div>
 
         <div className="zx7-content">
-          <p className="zx7-heading">ZX7 speaker</p>
-          <Link to="product/zx7-speaker" className="btn btn--secondary">
+          <p className="heading-4 zx7-heading">ZX7 speaker</p>
+          <Link to="speakers/zx7-speaker" className="btn btn--secondary">
             See product
           </Link>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

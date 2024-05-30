@@ -22,7 +22,9 @@
   color: var(--clr-neutral-400);
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.active {
+  font-weight: var(--fw-bold);
   color: var(--clr-primary-400);
 }
 

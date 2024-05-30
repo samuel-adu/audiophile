@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { FaTwitter, FaInstagram } from 'react-icons/fa6';
 import { IoLogoFacebook } from 'react-icons/io';
-
 import logo from '../assets/shared/logo.svg';
 import { Link } from 'react-router-dom';
 import '../styles/footer.css';

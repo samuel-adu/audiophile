@@ -6,7 +6,7 @@ import '../styles/productHeadphones.css';
 
 function ProductHeadphones() {
   return (
-    <div className="hero-section">
+    <section className="hero-section">
       <div className="hero-image">
         <picture>
           <source media="(min-width: 1024px)" srcSet={heroDesktop} />
@@ -17,20 +17,20 @@ function ProductHeadphones() {
 
       <div className="hero-content">
         <p className="overline-text">new product</p>
-        <h1 className="hero-heading">xx99 mark ii headphones</h1>
+        <h1 className="hero-heading heading-1">xx99 mark ii headphones</h1>
         <p className="hero-text">
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
 
         <Link
-          to="product/xx99-mark-two-headphones"
+          to="headphones/xx99-mark-two-headphones"
           className="btn btn--primary"
         >
           see product
         </Link>
       </div>
-    </div>
+    </section>
   );
 }
 

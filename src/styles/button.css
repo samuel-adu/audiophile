@@ -1,0 +1,46 @@
+.btn {
+  font-size: var(--text-xs);
+  font-weight: var(--fw-bold);
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  transition: border-color 0.25s;
+  display: inline-block;
+}
+
+.btn--primary {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+}
+
+.btn--primary:hover {
+  background-color: var(--clr-primary-100);
+  color: var(--clr-neutral-100);
+}
+
+.btn--secondary {
+  color: var(--clr-black-400);
+  border: 1px solid var(--clr-black-400);
+}
+
+.btn--secondary:hover {
+  background-color: var(--clr-black-400);
+  color: var(--clr-neutral-100);
+  border: 1px solid var(--clr-black-400);
+}
+
+.btn--secondary-invert {
+  background-color: var(--clr-black-400);
+  color: var(--clr-neutral-100);
+}
+
+.btn--secondary-invert:hover {
+  background-color: var(--clr-black-100);
+  color: var(--clr-neutral-100);
+}
+
+.btn--large {
+  width: 100%;
+}

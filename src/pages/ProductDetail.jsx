@@ -1,13 +1,17 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { getImageUrl } from '../utils/getImageUrl';
 import Menu from '../components/Menu';
+import Button from '../components/Button';
 import OrderCount from '../components/OrderCount';
 import data from '../data.json';
 import '../styles/productDetail.css';
+import { getCategory } from '../utils/getCategory';
 
 function ProductDetail() {
-  const { product } = useParams();
-  const item = data.filter((item) => item.slug === product);
+  const navigate = useNavigate();
+  const { productId } = useParams();
+  const product = data.find((item) => item.slug === productId);
+
   const {
     image,
     name,
@@ -17,11 +21,12 @@ function ProductDetail() {
     includes,
     gallery,
     others,
-  } = item[0];
+  } = product;
+
   return (
     <>
       <main className="container product-detail-section">
-        <Link to="/" className="back-btn">
+        <Link onClick={() => navigate(-1)} className="back-btn">
           go back
         </Link>
 
@@ -47,27 +52,27 @@ function ProductDetail() {
           </div>
 
           <div className="product-detail-content">
-            {item[0].new ? <p className="overline-text">new product</p> : ''}
-            <h3 className="heading-3 product-name">{name}</h3>
+            {product.new ? <p className="overline-text">new product</p> : ''}
+            <h2 className="heading-2 product-name">{name}</h2>
             <p className="card-text">{description}</p>
 
             <p className="price">${price.toLocaleString()}</p>
 
             <div className="order-tab">
               <OrderCount />
-              <button className="btn btn--primary">add to cart</button>
+              <Button variant="primary">add to cart</Button>
             </div>
           </div>
         </section>
 
         <div className="lg:flex lg:gap-[var(--spacing-l)]">
           <section className="features-section">
-            <h3 className="heading-4">features</h3>
+            <h3 className="heading-3">features</h3>
             <p className="card-text">{features}</p>
           </section>
 
           <section className="includes-section">
-            <h3 className="heading-4">in the box</h3>
+            <h3 className="heading-3">in the box</h3>
             <div>
               {includes.map((item, index) => (
                 <p key={index} className="includes-name">
@@ -144,7 +149,7 @@ function ProductDetail() {
         </section>
 
         <section className="other-section">
-          <h3 className="heading-4 heading">you may also like</h3>
+          <h3 className="heading-3 heading">you may also like</h3>
 
           <div className="other-items">
             {others.map((item, index) => (
@@ -167,7 +172,10 @@ function ProductDetail() {
                   />
                 </picture>
                 <p className="heading-5">{item.name}</p>
-                <Link to={`/product/${item.slug}`} className="btn btn--primary">
+                <Link
+                  to={`/${getCategory(item.slug)}/${item.slug}`}
+                  className="btn btn--primary"
+                >
                   see product
                 </Link>
               </div>
