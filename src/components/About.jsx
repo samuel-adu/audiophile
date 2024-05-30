@@ -6,26 +6,28 @@ import '../styles/about.css';
 function About() {
   return (
     <section className="about-section container">
-      <picture className="about-image">
-        <source
-          media="(min-width: 1024px)"
-          srcSet={bestGearModelDesktop}
-          className="model-image"
-        />
-        <source
-          media="(min-width: 640px)"
-          srcSet={bestGearModelTablet}
-          className="model-image"
-        />
-        <img src={bestGearModel} alt="" className="model-image" />
-      </picture>
+      <div className="about-image">
+        <picture>
+          <source
+            media="(min-width: 1024px)"
+            srcSet={bestGearModelDesktop}
+            className="model-image"
+          />
+          <source
+            media="(min-width: 640px)"
+            srcSet={bestGearModelTablet}
+            className="model-image"
+          />
+          <img src={bestGearModel} alt="" className="model-image" />
+        </picture>
+      </div>
 
       <div className="about-content">
         <h3 className="about-heading heading-2">
           Bringing you the <span>best</span> audio gear
         </h3>
 
-        <p className="about-body">
+        <p className="base-text">
           Located at the heart of New York City, Audiophile is the premier store
           for high end headphones, earphones, speakers, and audio accessories.
           We have a large showroom and luxury demonstration rooms available for
