@@ -198,6 +198,7 @@ p {
   font-size: var(--text-base);
   line-height: 25px;
   opacity: 0.5;
+  font-weight: var(--fw-medium);
 }
 
 .overline-text {
@@ -207,6 +208,11 @@ p {
   line-height: 19px;
   letter-spacing: 10px;
   margin-bottom: 1rem;
+}
+
+.number-text {
+  font-size: 1.125rem;
+  font-weight: var(--fw-bold);
 }
 
 /* @media (prefers-color-scheme: light) {
