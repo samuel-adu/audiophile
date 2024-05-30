@@ -6,6 +6,7 @@ import OrderCount from '../components/OrderCount';
 import data from '../data.json';
 import '../styles/productDetail.css';
 import { getCategory } from '../utils/getCategory';
+import About from '../components/About';
 
 function ProductDetail() {
   const navigate = useNavigate();
@@ -182,8 +183,11 @@ function ProductDetail() {
             ))}
           </div>
         </section>
-        <Menu />
       </main>
+      <aside className="container">
+        <Menu />
+      </aside>
+      <About />
     </>
   );
 }

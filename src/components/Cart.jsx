@@ -3,9 +3,9 @@ import '../styles/cart.css';
 import { Link } from 'react-router-dom';
 import OrderCount from '../components/OrderCount';
 import xx59 from '../assets/cart/image-xx59-headphones.jpg';
-import xx99mk1 from '../assets/cart/image-xx99-mark-one-headphones.jpg';
 import xx99mk2 from '../assets/cart/image-xx99-mark-two-headphones.jpg';
-// import yx1 from '../assets/cart/image-yx1-earphones.jpg';
+import yx1 from '../assets/cart/image-yx1-earphones.jpg';
+// import xx99mk1 from '../assets/cart/image-xx99-mark-one-headphones.jpg';
 // import zx7 from '../assets/cart/image-zx7-speaker.jpg';
 // import zx9 from '../assets/cart/image-zx9-speaker.jpg';
 
@@ -26,7 +26,7 @@ function Cart({ open, toggle }) {
         <div className="card-content">
           <div className="cart-item">
             <div className="cart-image">
-              <img src={xx59} alt="" />
+              <img src={xx99mk2} alt="" />
             </div>
 
             <div className="item-description">
@@ -38,7 +38,7 @@ function Cart({ open, toggle }) {
           </div>
           <div className="cart-item">
             <div className="cart-image">
-              <img src={xx99mk1} alt="" />
+              <img src={xx59} alt="" />
             </div>
 
             <div className="item-description">
@@ -50,7 +50,7 @@ function Cart({ open, toggle }) {
           </div>
           <div className="cart-item">
             <div className="cart-image">
-              <img src={xx99mk2} alt="" />
+              <img src={yx1} alt="" />
             </div>
 
             <div className="item-description">
