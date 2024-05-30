@@ -18,22 +18,22 @@ function Nav() {
 
           <ul className="nav-list">
             <li className='nav-item"'>
-              <NavLink to={'/'} className="nav-link">
+              <NavLink to="/" className="nav-link">
                 Home
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to={'headphones'} className="nav-link">
+              <NavLink to="headphones" className="nav-link">
                 Headphones
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to={'speakers'} className="nav-link">
+              <NavLink to="speakers" className="nav-link">
                 Speakers
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to={'earphones'} className="nav-link">
+              <NavLink to="earphones" className="nav-link">
                 Earphones
               </NavLink>
             </li>

@@ -29,7 +29,7 @@ function CategoryCard({ product }) {
         <h3 className="heading-2">{product.name}</h3>
         <p className="card-text">{product.description}</p>
 
-        <Link to={`/product/${product.slug}`} className="btn btn--primary">
+        <Link to={`${product.slug}`} className="btn btn--primary">
           see product
         </Link>
       </div>

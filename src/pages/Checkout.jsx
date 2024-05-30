@@ -10,7 +10,7 @@ function Checkout() {
   const navigate = useNavigate();
 
   return (
-    <div className="checkout-section container">
+    <main className="checkout-section container">
       <CheckoutModal showModal={on} toggleModal={toggle} />
       <Link onClick={() => navigate(-1)} className="back-btn">
         go back
@@ -157,7 +157,7 @@ function Checkout() {
           continue and pay
         </button>
       </div>
-    </div>
+    </main>
   );
 }
 

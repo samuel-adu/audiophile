@@ -5,11 +5,13 @@ import Button from '../components/Button';
 import OrderCount from '../components/OrderCount';
 import data from '../data.json';
 import '../styles/productDetail.css';
+import { getCategory } from '../utils/getCategory';
 
 function ProductDetail() {
   const navigate = useNavigate();
-  const { product } = useParams();
-  const item = data.filter((item) => item.slug === product);
+  const { productId } = useParams();
+  const product = data.find((item) => item.slug === productId);
+
   const {
     image,
     name,
@@ -19,7 +21,8 @@ function ProductDetail() {
     includes,
     gallery,
     others,
-  } = item[0];
+  } = product;
+
   return (
     <>
       <main className="container product-detail-section">
@@ -49,7 +52,7 @@ function ProductDetail() {
           </div>
 
           <div className="product-detail-content">
-            {item[0].new ? <p className="overline-text">new product</p> : ''}
+            {product.new ? <p className="overline-text">new product</p> : ''}
             <h2 className="heading-2 product-name">{name}</h2>
             <p className="card-text">{description}</p>
 
@@ -169,7 +172,10 @@ function ProductDetail() {
                   />
                 </picture>
                 <p className="heading-5">{item.name}</p>
-                <Link to={`/product/${item.slug}`} className="btn btn--primary">
+                <Link
+                  to={`/${getCategory(item.slug)}/${item.slug}`}
+                  className="btn btn--primary"
+                >
                   see product
                 </Link>
               </div>

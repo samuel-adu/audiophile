@@ -29,7 +29,7 @@ function ProductSpeaker() {
             truly remarkable sound.
           </p>
 
-          <Link to="product/zx9-speaker" className="btn btn--secondary-invert">
+          <Link to="speakers/zx9-speaker" className="btn btn--secondary-invert">
             See product
           </Link>
         </div>
@@ -54,7 +54,7 @@ function ProductSpeaker() {
 
         <div className="zx7-content">
           <p className="heading-4 zx7-heading">ZX7 speaker</p>
-          <Link to="product/zx7-speaker" className="btn btn--secondary">
+          <Link to="speakers/zx7-speaker" className="btn btn--secondary">
             See product
           </Link>
         </div>

@@ -6,7 +6,7 @@ import '../styles/productHeadphones.css';
 
 function ProductHeadphones() {
   return (
-    <div className="hero-section">
+    <section className="hero-section">
       <div className="hero-image">
         <picture>
           <source media="(min-width: 1024px)" srcSet={heroDesktop} />
@@ -24,13 +24,13 @@ function ProductHeadphones() {
         </p>
 
         <Link
-          to="product/xx99-mark-two-headphones"
+          to="headphones/xx99-mark-two-headphones"
           className="btn btn--primary"
         >
           see product
         </Link>
       </div>
-    </div>
+    </section>
   );
 }
 
