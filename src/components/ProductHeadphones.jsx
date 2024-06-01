@@ -17,8 +17,8 @@ function ProductHeadphones() {
 
       <div className="hero-content">
         <p className="overline-text">new product</p>
-        <h1 className="hero-heading heading-1">xx99 mark ii headphones</h1>
-        <p className="hero-text">
+        <h1 className="heading-1 hero-heading">xx99 mark ii headphones</h1>
+        <p className="base-text hero-text">
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>

@@ -1,6 +1,5 @@
 import '../styles/cart.css';
 import { Link } from 'react-router-dom';
-import Modal from './Modal';
 import OrderCount from '../components/OrderCount';
 import xx59 from '../assets/cart/image-xx59-headphones.jpg';
 import xx99mk2 from '../assets/cart/image-xx99-mark-two-headphones.jpg';
@@ -15,12 +14,17 @@ import cart from '../assets/shared/icon-cart.svg';
 function Cart() {
   const [cartOpen, setCartOpen] = useState(false);
 
+  function toggleCart() {
+    setCartOpen((prevCartOpen) => !prevCartOpen);
+  }
+
   return (
     <>
-      <button onClick={() => setCartOpen(true)}>
+      <button onClick={toggleCart}>
         <img className="cart-icon" src={cart} alt="" />
       </button>
-      <Modal isOpen={cartOpen} onClose={() => setCartOpen(false)}>
+
+      {cartOpen && (
         <div className="cart">
           <div className="cart-header">
             <h4 className="cart-heading heading-6">cart (3)</h4>
@@ -79,7 +83,7 @@ function Cart() {
             checkout
           </Link>
         </div>
-      </Modal>
+      )}
     </>
   );
 }
