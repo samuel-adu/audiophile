@@ -1,6 +1,7 @@
 .hero-section {
   position: relative;
-  top: -90px;
+  /* top: -90px; */
+  margin-bottom: var(--spacing-m);
 }
 
 .hero-content {
@@ -28,6 +29,9 @@
 }
 
 @media (min-width: 640px) {
+  .hero-section {
+    margin-bottom: var(--spacing-xl);
+  }
 }
 
 @media (min-width: 1024px) {
@@ -39,7 +43,7 @@
     transform: translate(-80%, -50%);
   }
 
-  .hero-text {
+  /* .hero-text {
     width: 90%;
-  }
+  } */
 }

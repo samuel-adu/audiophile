@@ -78,21 +78,6 @@ img {
   max-width: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.1;
-  margin-bottom: 1rem;
-}
-
-p {
-  font-size: var(--text-base);
-  line-height: 1.6;
-}
-
 .btn {
   font-size: var(--text-xs);
   font-weight: var(--fw-bold);
@@ -149,6 +134,7 @@ p {
 .heading-2 {
   font-size: var(--heading-2);
   font-weight: var(--fw-bold);
+  line-height: 40px;
   letter-spacing: 2px;
   text-transform: uppercase;
 }

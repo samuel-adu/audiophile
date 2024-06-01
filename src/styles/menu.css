@@ -3,7 +3,9 @@
   position: absolute;
   top: 90px;
   left: 0;
-  padding: 2rem 1.5rem;
+  padding-top: calc(var(--spacing-m) + var(--spacing-base));
+  padding-bottom: var(--spacing-base);
+  padding-inline: var(--spacing-base);
   border-radius: 0 0 0.5rem 0.5rem;
 }
 
@@ -21,11 +23,12 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  flex: 1;
 }
 
 .menu-image {
-  width: 50%;
   position: relative;
+  top: -32.5px;
 }
 
 .menu-btn {
@@ -57,7 +60,9 @@
   }
 
   .nav-menu {
-    padding: var(--spacing-m) var(--spacing-s);
+    padding-top: calc(var(--spacing-m) + var(--spacing-s));
+    padding-bottom: var(--spacing-m);
+    padding-inline: var(--spacing-s);
   }
 }
 

@@ -32,7 +32,7 @@ function OrderCount({ size, ...rest }) {
 }
 
 OrderCount.propTypes = {
-  size: PropType.string.isRequired,
+  size: PropType.string,
 };
 
 export default OrderCount;

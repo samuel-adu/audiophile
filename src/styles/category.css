@@ -17,8 +17,8 @@
   border-radius: 0.5rem;
 }
 
-.product-name {
-  color: var(--clr-black-400);
+.category-card-content .product-name {
+  margin-bottom: var(--spacing-base);
 }
 
 @media (min-width: 640px) {
