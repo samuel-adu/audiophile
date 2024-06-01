@@ -26,7 +26,7 @@ function CategoryCard({ product }) {
       </div>
       <div className="category-card-content">
         <p className="overline-text">{product.new ? 'new product' : ''}</p>
-        <h3 className="heading-2">{product.name}</h3>
+        <p className="heading-2 product-name">{product.name}</p>
         <p className="card-text">{product.description}</p>
 
         <Link to={`${product.slug}`} className="btn btn--primary">

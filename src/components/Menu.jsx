@@ -9,7 +9,13 @@ function Menu() {
   return (
     <div className="menu-container">
       <div className="menu-card">
-        <img src={headphones} alt="" className="menu-image" />
+        <img
+          src={headphones}
+          alt=""
+          className="menu-image"
+          width={80}
+          height={104}
+        />
         <p className="menu-heading heading-6">Headphones</p>
         <Link to={'/headphones'} className="menu-btn">
           shop
@@ -17,7 +23,13 @@ function Menu() {
         </Link>
       </div>
       <div className="menu-card">
-        <img src={speakers} alt="" className="menu-image" />
+        <img
+          src={speakers}
+          alt=""
+          className="menu-image"
+          width={84}
+          height={101}
+        />
         <p className="menu-heading heading-6">Speakers</p>
         <Link to={'/speakers'} className="menu-btn">
           shop
@@ -25,7 +37,13 @@ function Menu() {
         </Link>
       </div>
       <div className="menu-card">
-        <img src={earphones} alt="" className="menu-image" />
+        <img
+          src={earphones}
+          alt=""
+          className="menu-image"
+          width={103}
+          height={104}
+        />
         <p className="menu-heading heading-6">Earphones</p>
         <Link to={'/earphones'} className="menu-btn">
           shop

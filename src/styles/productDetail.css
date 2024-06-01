@@ -1,3 +1,8 @@
+.product-detail-section {
+  padding-top: 90px;
+  margin-bottom: var(--spacing-xl);
+}
+
 .back-btn {
   text-transform: capitalize;
   color: var(--clr-black-400);
@@ -73,10 +78,6 @@
 
 .gallery-section img {
   border-radius: 0.5rem;
-}
-
-.other-section {
-  margin-bottom: var(--spacing-l);
 }
 
 .other-section .heading {
