@@ -12,8 +12,10 @@ function Home() {
       <header>
         <ProductHeadphones />
       </header>
-      <main className="container main-section">
+      <aside className="container mb-[var(--spacing-l)] md:mb-[var(--spacing-xl)]">
         <Menu />
+      </aside>
+      <main className="container main-section">
         <ProductSpeaker />
         <ProductEarphones />
       </main>
