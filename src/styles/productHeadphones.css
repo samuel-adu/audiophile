@@ -13,11 +13,6 @@
 }
 
 .hero-heading {
-  font-size: var(--heading-1);
-  font-weight: var(--fw-bold);
-  line-height: 40px;
-  letter-spacing: 1.29px;
-  text-transform: uppercase;
   margin-bottom: var(--spacing-base);
 }
 
@@ -33,21 +28,18 @@
 }
 
 @media (min-width: 640px) {
-  .hero-heading {
-    font-size: var(--heading-1);
-    line-height: 58px;
-  }
 }
 
 @media (min-width: 1024px) {
   .hero-content {
     text-align: left;
-    width: 30%;
-    right: 100%;
-    transform: translate(-120%, -50%);
+    width: 50%;
+    max-width: 379px;
+    left: 35%;
+    transform: translate(-80%, -50%);
   }
 
   .hero-text {
-    width: 80%;
+    width: 90%;
   }
 }

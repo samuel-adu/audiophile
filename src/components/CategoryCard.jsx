@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropType from 'prop-types';
 import { Link } from 'react-router-dom';
 import { getImageUrl } from '../utils/getImageUrl';
 
@@ -36,5 +36,9 @@ function CategoryCard({ product }) {
     </div>
   );
 }
+
+CategoryCard.propTypes = {
+  product: PropType.object.isRequired,
+};
 
 export default CategoryCard;
