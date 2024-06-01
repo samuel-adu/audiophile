@@ -1,8 +1,16 @@
+.nav-menu {
+  background-color: var(--clr-neutral-100);
+  position: absolute;
+  top: 90px;
+  left: 0;
+  padding: 2rem 1.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
 .menu-container {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-m);
-  margin-bottom: var(--spacing-l);
 }
 
 .menu-card {
@@ -45,7 +53,17 @@
 @media (min-width: 640px) {
   .menu-container {
     flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .nav-menu {
+    padding: var(--spacing-m) var(--spacing-s);
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu-container {
+    flex-direction: row;
     gap: var(--spacing-base);
-    margin-bottom: var(--spacing-xl);
   }
 }

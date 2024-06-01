@@ -184,7 +184,7 @@ function ProductDetail() {
           </div>
         </section>
       </main>
-      <aside className="container">
+      <aside className="container mb-[var(--spacing-l)] md:mb-[var(--spacing-xl)]">
         <Menu />
       </aside>
       <About />
