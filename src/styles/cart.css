@@ -1,3 +1,14 @@
+.cart {
+  background-color: var(--clr-neutral-100);
+  position: absolute;
+  right: 0;
+  width: 100%;
+  max-width: 377px;
+  top: calc(90px + var(--spacing-base));
+  padding: 2rem 1.75rem 1.75rem;
+  border-radius: 0.5rem;
+}
+
 .cart-header {
   display: flex;
   align-items: center;
@@ -48,4 +59,10 @@
   color: var(--clr-primary-400);
   opacity: 1;
   text-decoration: underline;
+}
+
+@media (min-width: 680px) {
+  .cart {
+    padding: 2rem;
+  }
 }

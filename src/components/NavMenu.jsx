@@ -8,6 +8,7 @@ function NavMenu() {
   function toggleMenu() {
     setIsOpen((prev) => !prev);
   }
+
   return (
     <>
       <button onClick={toggleMenu} className="menu-toggle">
