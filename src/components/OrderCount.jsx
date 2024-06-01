@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropType from 'prop-types';
 import { useState } from 'react';
 import classNames from 'classnames';
 import '../styles/orderCount.css';
@@ -30,5 +30,9 @@ function OrderCount({ size, ...rest }) {
     </div>
   );
 }
+
+OrderCount.propTypes = {
+  size: PropType.string.isRequired,
+};
 
 export default OrderCount;

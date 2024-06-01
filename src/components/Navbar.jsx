@@ -1,18 +1,19 @@
 import { NavLink } from 'react-router-dom';
-import cart from '../assets/shared/icon-cart.svg';
+import '../styles/navbar.css';
 import logo from '../assets/shared/logo.svg';
 import hamburger from '../assets/shared/mobile/icon-hamburger.svg';
-import '../styles/nav.css';
-import Cart from './Cart';
 import useToggle from '../hooks/useToggle';
+import Cart from './Cart';
 
-function Nav() {
-  const { on, toggle } = useToggle();
+function Navbar() {
+  const { toggle } = useToggle();
   return (
-    <nav className="nav">
+    <div className="navbar">
       <div className="container">
-        <div className="navbar">
-          <img className="menu-toggle" src={hamburger} alt="" />
+        <nav className="nav">
+          <button onClick={toggle} className="menu-toggle">
+            <img src={hamburger} alt="" />
+          </button>
 
           <img className="logo" src={logo} alt="" />
 
@@ -38,15 +39,12 @@ function Nav() {
               </NavLink>
             </li>
           </ul>
-          <Cart open={on} toggle={toggle} />
 
-          <button onClick={toggle}>
-            <img className="cart-icon" src={cart} alt="" />
-          </button>
-        </div>
+          <Cart />
+        </nav>
       </div>
-    </nav>
+    </div>
   );
 }
 
-export default Nav;
+export default Navbar;

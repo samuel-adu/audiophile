@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropType from 'prop-types';
 import '../styles/button.css';
 import classNames from 'classnames';
 
@@ -13,5 +13,13 @@ function Button({ children, size, variant, className, path, ...rest }) {
     </button>
   );
 }
+
+Button.propTypes = {
+  children: PropType.string,
+  size: PropType.string,
+  variant: PropType.string,
+  className: PropType.string,
+  path: PropType.string,
+};
 
 export default Button;

@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropType from 'prop-types';
 import '../styles/header.css';
 
 function Header({ children }) {
@@ -8,5 +8,9 @@ function Header({ children }) {
     </header>
   );
 }
+
+Header.propTypes = {
+  children: PropType.string,
+};
 
 export default Header;

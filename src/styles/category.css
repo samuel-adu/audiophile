@@ -32,6 +32,10 @@
 }
 
 @media (min-width: 1024px) {
+  .product-category-section {
+    gap: var(--spacing-l);
+  }
+
   .category-card {
     display: flex;
     align-items: center;
@@ -46,7 +50,8 @@
 
   .category-card-image,
   .category-card-content {
-    flex: 1;
+    /* flex: 1; */
+    width: 50%;
   }
 
   .category-card-content {

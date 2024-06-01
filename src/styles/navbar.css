@@ -1,8 +1,8 @@
-.nav {
+.navbar {
   background-color: var(--clr-black-400);
 }
 
-.navbar {
+.nav {
   position: relative;
   z-index: 10;
   border-bottom: 1px solid #979797;

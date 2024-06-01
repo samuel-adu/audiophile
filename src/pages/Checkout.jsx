@@ -1,21 +1,24 @@
 import '../styles/checkout.css';
 import { Link, useNavigate } from 'react-router-dom';
 import CheckoutModal from '../components/CheckoutModal';
-import useToggle from '../hooks/useToggle';
 import xx59 from '../assets/cart/image-xx59-headphones.jpg';
 import xx99mk2 from '../assets/cart/image-xx99-mark-two-headphones.jpg';
 import yx1 from '../assets/cart/image-yx1-earphones.jpg';
+import { useState } from 'react';
 // import xx99mk1 from '../assets/cart/image-xx99-mark-one-headphones.jpg';
 // import zx7 from '../assets/cart/image-zx7-speaker.jpg';
 // import zx9 from '../assets/cart/image-zx9-speaker.jpg';
 
 function Checkout() {
-  const { on, toggle } = useToggle();
+  const [checkOutModal, setCheckoutModal] = useState(false);
   const navigate = useNavigate();
 
   return (
     <main className="checkout-section container">
-      <CheckoutModal showModal={on} toggleModal={toggle} />
+      <CheckoutModal
+        isOpen={checkOutModal}
+        onClose={() => setCheckoutModal(false)}
+      />
 
       <Link onClick={() => navigate(-1)} className="back-btn">
         go back
@@ -241,7 +244,10 @@ function Checkout() {
             <p className="uppercase base-text">GRAND TOTAL</p>
             <p className="number-text">$5,446</p>
           </div>
-          <button onClick={toggle} className="btn btn--primary btn--large">
+          <button
+            onClick={() => setCheckoutModal(true)}
+            className="btn btn--primary btn--large"
+          >
             continue and pay
           </button>
         </div>
