@@ -9,40 +9,40 @@ function Navbar() {
   // const { toggle } = useToggle();
   return (
     <div className="navbar">
-      <div className="container">
-        <nav className="nav">
-          <NavMenu />
+      {/* <div className="container"> */}
+      <nav className="nav">
+        <NavMenu />
 
-          <Link to="/">
-            <img className="logo" src={logo} alt="" />
-          </Link>
+        <Link to="/">
+          <img className="logo" src={logo} alt="" />
+        </Link>
 
-          <ul className="nav-list">
-            <li className='nav-item"'>
-              <NavLink to="/" className="nav-link">
-                Home
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="headphones" className="nav-link">
-                Headphones
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="speakers" className="nav-link">
-                Speakers
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="earphones" className="nav-link">
-                Earphones
-              </NavLink>
-            </li>
-          </ul>
+        <ul className="nav-list">
+          <li className='nav-item"'>
+            <NavLink to="/" className="nav-link">
+              Home
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink to="headphones" className="nav-link">
+              Headphones
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink to="speakers" className="nav-link">
+              Speakers
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink to="earphones" className="nav-link">
+              Earphones
+            </NavLink>
+          </li>
+        </ul>
 
-          <Cart />
-        </nav>
-      </div>
+        <Cart />
+      </nav>
+      {/* </div> */}
     </div>
   );
 }

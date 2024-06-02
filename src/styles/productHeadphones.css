@@ -10,7 +10,9 @@
   position: absolute;
   top: 55%;
   left: 50%;
+  width: 100%;
   transform: translate(-50%, -50%);
+  padding-inline: 2rem;
 }
 
 .hero-content .overline-text {
@@ -32,6 +34,11 @@
   .hero-section {
     margin-bottom: var(--spacing-xl);
   }
+
+  .hero-content {
+    width: 379px;
+    padding: 0;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -40,10 +47,11 @@
     width: 50%;
     max-width: 379px;
     left: 35%;
-    transform: translate(-80%, -50%);
+    transform: translate(-75%, -50%);
+    padding: 0;
   }
 
-  /* .hero-text {
-    width: 90%;
-  } */
+  .hero-text {
+    width: 95%;
+  }
 }

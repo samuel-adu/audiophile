@@ -3,10 +3,12 @@
   position: absolute;
   top: 90px;
   left: 0;
+  width: 100%;
   padding-top: calc(var(--spacing-m) + var(--spacing-base));
   padding-bottom: var(--spacing-base);
   padding-inline: var(--spacing-base);
   border-radius: 0 0 0.5rem 0.5rem;
+  z-index: 100;
 }
 
 .menu-container {
@@ -51,6 +53,11 @@
 .menu-btn:hover {
   color: var(--clr-primary-400);
   opacity: 1;
+}
+
+.close-icon {
+  font-size: 1.5rem;
+  color: var(--clr-neutral-100);
 }
 
 @media (min-width: 640px) {
