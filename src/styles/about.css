@@ -18,10 +18,6 @@
   color: var(--clr-primary-400);
 }
 
-.about-body {
-  opacity: 0.5;
-}
-
 @media (min-width: 640px) {
   .about-content {
     padding-inline: 58px;
@@ -39,13 +35,13 @@
   }
 
   .about-image {
-    width: 50%;
+    width: 540px;
     margin-bottom: 0;
   }
-
+  
   .about-content {
+    flex: 1;
     text-align: left;
-    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;

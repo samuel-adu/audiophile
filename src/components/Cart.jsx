@@ -24,6 +24,7 @@ function Cart() {
         <img className="cart-icon" src={cart} alt="" />
       </button>
 
+      {/* <div className="container"></div> */}
       {cartOpen && (
         <div className="cart">
           <div className="cart-header">

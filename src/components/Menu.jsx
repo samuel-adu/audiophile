@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
+import PropType from 'prop-types';
 import arrow from '../assets/shared/icon-arrow-right.svg';
 import '../styles/menu.css';
 import earphones from '../assets/shared/image-category-thumbnail-earphones.png';
 import headphones from '../assets/shared/image-category-thumbnail-headphones.png';
 import speakers from '../assets/shared/image-category-thumbnail-speakers.png';
 
-function Menu() {
+function Menu({ menuClose }) {
   return (
     <div className="menu-container">
       <div className="menu-card">
@@ -17,7 +18,7 @@ function Menu() {
           height={104}
         />
         <p className="menu-heading heading-6">Headphones</p>
-        <Link to={'/headphones'} className="menu-btn">
+        <Link onClick={menuClose} to={'/headphones'} className="menu-btn">
           shop
           <img src={arrow} alt="" />
         </Link>
@@ -31,7 +32,7 @@ function Menu() {
           height={101}
         />
         <p className="menu-heading heading-6">Speakers</p>
-        <Link to={'/speakers'} className="menu-btn">
+        <Link onClick={menuClose} to={'/speakers'} className="menu-btn">
           shop
           <img src={arrow} alt="" />
         </Link>
@@ -45,7 +46,7 @@ function Menu() {
           height={104}
         />
         <p className="menu-heading heading-6">Earphones</p>
-        <Link to={'/earphones'} className="menu-btn">
+        <Link onClick={menuClose} to={'/earphones'} className="menu-btn">
           shop
           <img src={arrow} alt="" />
         </Link>
@@ -53,5 +54,9 @@ function Menu() {
     </div>
   );
 }
+
+Menu.propTypes = {
+  menuClose: PropType.func,
+};
 
 export default Menu;
