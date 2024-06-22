@@ -1,20 +1,24 @@
+import About from '../components/About';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { getImageUrl } from '../utils/getImageUrl';
 import Menu from '../components/Menu';
-import Button from '../components/Button';
-import OrderCount from '../components/OrderCount';
 import data from '../data.json';
 import '../styles/productDetail.css';
 import { getCategory } from '../utils/getCategory';
-import About from '../components/About';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addItemToCart } from '../features/cart/cartSlice';
 
 function ProductDetail() {
   const navigate = useNavigate();
   const { productId } = useParams();
   const product = data.find((item) => item.slug === productId);
+  const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch();
 
   const {
     image,
+    id,
     name,
     price,
     description,
@@ -60,8 +64,29 @@ function ProductDetail() {
             <p className="price">${price.toLocaleString()}</p>
 
             <div className="order-tab">
-              <OrderCount />
-              <Button variant="primary">add to cart</Button>
+              <div className="order-count-tab">
+                <button
+                  onClick={() => {
+                    quantity > 1 && setQuantity((prev) => prev - 1);
+                  }}
+                  className="order-btn"
+                >
+                  -
+                </button>
+                <p className="order-count">{quantity}</p>
+                <button
+                  onClick={() => setQuantity((prev) => prev + 1)}
+                  className="order-btn"
+                >
+                  +
+                </button>
+              </div>
+              <button
+                className="btn btn--primary"
+                onClick={() => dispatch(addItemToCart({ id, quantity }))}
+              >
+                add to cart
+              </button>
             </div>
           </div>
         </section>

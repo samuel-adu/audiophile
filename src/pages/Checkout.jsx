@@ -1,17 +1,24 @@
 import '../styles/checkout.css';
 import { Link, useNavigate } from 'react-router-dom';
 import CheckoutModal from '../components/CheckoutModal';
-import xx59 from '../assets/cart/image-xx59-headphones.jpg';
-import xx99mk2 from '../assets/cart/image-xx99-mark-two-headphones.jpg';
-import yx1 from '../assets/cart/image-yx1-earphones.jpg';
 import { useState } from 'react';
-// import xx99mk1 from '../assets/cart/image-xx99-mark-one-headphones.jpg';
-// import zx7 from '../assets/cart/image-zx7-speaker.jpg';
-// import zx9 from '../assets/cart/image-zx9-speaker.jpg';
+import { useSelector } from 'react-redux';
 
 function Checkout() {
   const [checkOutModal, setCheckoutModal] = useState(false);
   const navigate = useNavigate();
+  const { cartItems } = useSelector((state) => state.cart);
+
+  let total = 0;
+  if (cartItems.length > 0) {
+    cartItems.forEach((item) => {
+      total += item.price * item.quantity;
+    });
+  }
+
+  const vat = (total * 0.2).toFixed();
+
+  const grandTotal = total + 50;
 
   return (
     <main className="checkout-section container">
@@ -183,53 +190,27 @@ function Checkout() {
           <h6 className="heading-6">summary </h6>
 
           <div className="summary-order-list mb-8">
-            <div className="mb-6 flex items-center">
-              <div className="cart-image mr-4">
-                <img src={xx99mk2} alt="" className="rounded-lg" />
-              </div>
-
-              <div className="flex justify-between flex-1">
-                <div>
-                  <p className="item-name">XX99 MK II</p>
-                  <p className="item-price">$2,999</p>
+            {cartItems.map((item) => (
+              <div className="mb-6 flex items-center" key={item.id}>
+                <div className="cart-image mr-4">
+                  <img src={item.image} alt="" className="rounded-lg" />
                 </div>
 
-                <p className="base-text">x1</p>
-              </div>
-            </div>
-            <div className="mb-6 flex items-center">
-              <div className="cart-image mr-4">
-                <img src={xx59} alt="" className="rounded-lg" />
-              </div>
+                <div className="flex justify-between flex-1">
+                  <div>
+                    <p className="item-name">{item.name.toUpperCase()}</p>
+                    <p className="item-price">{item.price}</p>
+                  </div>
 
-              <div className="flex justify-between flex-1">
-                <div>
-                  <p className="item-name">XX59</p>
-                  <p className="item-price">$899</p>
+                  <p className="base-text">x{item.quantity}</p>
                 </div>
-
-                <p className="base-text">x1</p>
               </div>
-            </div>
-            <div className="mb-6 flex items-center">
-              <div className="cart-image mr-4">
-                <img src={yx1} alt="" className="rounded-lg" />
-              </div>
-
-              <div className="flex justify-between flex-1">
-                <div>
-                  <p className="item-name">YX1</p>
-                  <p className="item-price">$599</p>
-                </div>
-
-                <p className="base-text">x1</p>
-              </div>
-            </div>
+            ))}
           </div>
 
           <div className="flex justify-between mb-2">
             <p className="base-text">TOTAL</p>
-            <p className="number-text">$5,446</p>
+            <p className="number-text">${total.toLocaleString()}</p>
           </div>
 
           <div className="flex justify-between mb-2">
@@ -238,11 +219,11 @@ function Checkout() {
           </div>
           <div className="flex justify-between mb-6">
             <p className="uppercase base-text">VAT (INCLUDED)</p>
-            <p className="number-text">$1,079</p>
+            <p className="number-text">${vat.toLocaleString()}</p>
           </div>
           <div className="flex justify-between mb-8">
             <p className="uppercase base-text">GRAND TOTAL</p>
-            <p className="number-text">$5,446</p>
+            <p className="number-text">${grandTotal.toLocaleString()}</p>
           </div>
           <button
             onClick={() => setCheckoutModal(true)}

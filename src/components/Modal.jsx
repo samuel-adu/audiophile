@@ -1,15 +1,17 @@
+import ReactDom from 'react-dom';
 import PropType from 'prop-types';
 import '../styles/modal.css';
 
 function Modal({ isOpen, onClose, children }) {
   if (!isOpen) return null;
 
-  return (
+  return ReactDom.createPortal(
     <div onClick={onClose} className="modal-overlay">
       <div onClick={(e) => e.stopPropagation()} className="modal-container">
         {children}
       </div>
-    </div>
+    </div>,
+    document.getElementById('portal')
   );
 }
 

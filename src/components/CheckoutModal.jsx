@@ -2,12 +2,12 @@
 import { Link } from 'react-router-dom';
 import { FaCheck } from 'react-icons/fa6';
 import xx59 from '../assets/cart/image-xx59-headphones.jpg';
-// import xx99mk1 from '../assets/cart/image-xx99-mark-one-headphones.jpg';
-// import xx99mk2 from '../assets/cart/image-xx99-mark-two-headphones.jpg';
 import '../styles/checkoutModal.css';
 import Modal from './Modal';
+import { useSelector } from 'react-redux';
 
 function CheckoutModal({ isOpen, onClose }) {
+  const { cartItems } = useSelector((state) => state.cart);
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <div className="checkout-modal">
@@ -28,13 +28,23 @@ function CheckoutModal({ isOpen, onClose }) {
                 <img src={xx59} alt="" />
               </div>
               <div className="checkout-modal__item-desc">
-                <p className="checkout-modal__item-name">XX99 MK II</p>
-                <p className="checkout-modal__item-price">$2,999</p>
+                <p className="checkout-modal__item-name">
+                  {cartItems[0].name.toUpperCase()}
+                </p>
+                <p className="checkout-modal__item-price">
+                  {cartItems[0].price}
+                </p>
               </div>
               <p className="checkout-modal__quantity">x1</p>
             </div>
             <div className="checkout-modal__others-div">
-              <p className="checkout-modal__other-items">and 2 other item(s)</p>
+              {cartItems.length > 1 && (
+                <p className="checkout-modal__other-items">
+                  {`and ${cartItems.length - 1} other item${
+                    cartItems.length > 2 ? '(s)' : ''
+                  }`}
+                </p>
+              )}
             </div>
           </div>
 
