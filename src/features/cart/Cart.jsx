@@ -2,13 +2,20 @@ import '../../styles/cart.css';
 import { Link } from 'react-router-dom';
 import CartItem from './CartItem';
 import { useDispatch, useSelector } from 'react-redux';
-import { clearCart } from './cartSlice';
+import { clearCart, updateTotals } from './cartSlice';
 
-function Cart() {
-  const { cartItems } = useSelector((state) => state.cart);
+function Cart({ setOpenCart }) {
+  const { cartItems, numberOfItems, cartTotal } = useSelector(
+    (state) => state.cart
+  );
   const dispatch = useDispatch();
 
-  if (!cartItems.length) {
+  function handleRemoveAll() {
+    dispatch(clearCart());
+    dispatch(updateTotals());
+  }
+
+  if (cartTotal === 0) {
     return (
       <div className="cart">
         <p>Your cart is empty</p>
@@ -16,24 +23,11 @@ function Cart() {
     );
   }
 
-  function getTotal() {
-    let total = 0;
-    if (cartItems.length > 0) {
-      cartItems.forEach((item) => {
-        total += item.price * item.quantity;
-      });
-    }
-    return total.toLocaleString();
-  }
-
   return (
     <div className="cart">
       <div className="cart-header">
-        <h4 className="cart-heading heading-6">cart ({cartItems.length})</h4>
-        <button
-          className="base-text remove-all-btn"
-          onClick={() => dispatch(clearCart())}
-        >
+        <h4 className="cart-heading heading-6">cart ({numberOfItems})</h4>
+        <button className="base-text remove-all-btn" onClick={handleRemoveAll}>
           Remove all
         </button>
       </div>
@@ -46,10 +40,14 @@ function Cart() {
 
       <div className="cart-summary">
         <p className="base-text">TOTAL</p>
-        <p className="heading-6">{`$${getTotal()}`}</p>
+        <p className="heading-6">{`$${cartTotal}`}</p>
       </div>
 
-      <Link to="/checkout" className="btn btn--primary btn--large">
+      <Link
+        to="/checkout"
+        className="btn btn--primary btn--large"
+        onClick={() => setOpenCart(false)}
+      >
         checkout
       </Link>
     </div>

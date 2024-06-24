@@ -6,7 +6,7 @@ import Cart from './Cart';
 function CartModal({ openCart, setOpenCart }) {
   return (
     <Modal isOpen={openCart} onClose={() => setOpenCart(false)}>
-      <Cart />
+      <Cart setOpenCart={setOpenCart} />
     </Modal>
   );
 }

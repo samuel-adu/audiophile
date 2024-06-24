@@ -4,6 +4,7 @@ import {
   incrementItemQuantity,
   decrementItemQuantity,
   removeItemFromCart,
+  updateTotals,
 } from './cartSlice';
 
 function CartItem({ item }) {
@@ -13,9 +14,16 @@ function CartItem({ item }) {
   function handleQuantityReduction() {
     if (quantity === 1) {
       dispatch(removeItemFromCart(id));
+      dispatch(updateTotals());
     } else {
       dispatch(decrementItemQuantity(id));
+      dispatch(updateTotals());
     }
+  }
+
+  function handleQuantityIncrement() {
+    dispatch(incrementItemQuantity(id));
+    dispatch(updateTotals());
   }
 
   return (
@@ -34,10 +42,7 @@ function CartItem({ item }) {
           -
         </button>
         <p className="order-count">{quantity}</p>
-        <button
-          className="order-btn"
-          onClick={() => dispatch(incrementItemQuantity(id))}
-        >
+        <button className="order-btn" onClick={handleQuantityIncrement}>
           +
         </button>
       </div>

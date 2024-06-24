@@ -7,7 +7,9 @@ import Modal from './Modal';
 import { useSelector } from 'react-redux';
 
 function CheckoutModal({ isOpen, onClose }) {
-  const { cartItems } = useSelector((state) => state.cart);
+  const { cartItems, numberOfItems, grandTotal } = useSelector(
+    (state) => state.cart
+  );
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <div className="checkout-modal">
@@ -38,10 +40,10 @@ function CheckoutModal({ isOpen, onClose }) {
               <p className="checkout-modal__quantity">x1</p>
             </div>
             <div className="checkout-modal__others-div">
-              {cartItems.length > 1 && (
+              {numberOfItems > 1 && (
                 <p className="checkout-modal__other-items">
-                  {`and ${cartItems.length - 1} other item${
-                    cartItems.length > 2 ? '(s)' : ''
+                  {`and ${numberOfItems - 1} other item${
+                    numberOfItems > 2 ? '(s)' : ''
                   }`}
                 </p>
               )}
@@ -50,7 +52,7 @@ function CheckoutModal({ isOpen, onClose }) {
 
           <div className="checkout-modal__total">
             <p className="grand-total">grand total</p>
-            <p className="grand-cost">$5,446</p>
+            <p className="grand-cost">${grandTotal}</p>
           </div>
         </div>
 

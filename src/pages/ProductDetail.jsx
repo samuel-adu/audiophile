@@ -7,7 +7,7 @@ import '../styles/productDetail.css';
 import { getCategory } from '../utils/getCategory';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addItemToCart } from '../features/cart/cartSlice';
+import { addItemToCart, updateTotals } from '../features/cart/cartSlice';
 
 function ProductDetail() {
   const navigate = useNavigate();
@@ -27,6 +27,11 @@ function ProductDetail() {
     gallery,
     others,
   } = product;
+
+  function addTo() {
+    dispatch(addItemToCart({ id, quantity }));
+    dispatch(updateTotals());
+  }
 
   return (
     <>
@@ -83,7 +88,7 @@ function ProductDetail() {
               </div>
               <button
                 className="btn btn--primary"
-                onClick={() => dispatch(addItemToCart({ id, quantity }))}
+                onClick={addTo}
               >
                 add to cart
               </button>

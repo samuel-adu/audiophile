@@ -7,18 +7,9 @@ import { useSelector } from 'react-redux';
 function Checkout() {
   const [checkOutModal, setCheckoutModal] = useState(false);
   const navigate = useNavigate();
-  const { cartItems } = useSelector((state) => state.cart);
-
-  let total = 0;
-  if (cartItems.length > 0) {
-    cartItems.forEach((item) => {
-      total += item.price * item.quantity;
-    });
-  }
-
-  const vat = (total * 0.2).toFixed();
-
-  const grandTotal = total + 50;
+  const { cartItems, vat, cartTotal, grandTotal } = useSelector(
+    (state) => state.cart
+  );
 
   return (
     <main className="checkout-section container">
@@ -210,7 +201,7 @@ function Checkout() {
 
           <div className="flex justify-between mb-2">
             <p className="base-text">TOTAL</p>
-            <p className="number-text">${total.toLocaleString()}</p>
+            <p className="number-text">${cartTotal.toLocaleString()}</p>
           </div>
 
           <div className="flex justify-between mb-2">
