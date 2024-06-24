@@ -1,15 +1,12 @@
 import { NavLink, Link } from 'react-router-dom';
 import '../styles/navbar.css';
 import logo from '../assets/shared/logo.svg';
-// import useToggle from '../hooks/useToggle';
-import Cart from './Cart';
+import cart from '../assets/shared/icon-cart.svg';
 import NavMenu from '../components/NavMenu';
 
-function Navbar() {
-  // const { toggle } = useToggle();
+function Navbar({ setOpenCart }) {
   return (
     <div className="navbar">
-      {/* <div className="container"> */}
       <nav className="nav">
         <NavMenu />
 
@@ -40,9 +37,10 @@ function Navbar() {
           </li>
         </ul>
 
-        <Cart />
+        <button onClick={() => setOpenCart(true)}>
+          <img className="cart-icon" src={cart} alt="" />
+        </button>
       </nav>
-      {/* </div> */}
     </div>
   );
 }
