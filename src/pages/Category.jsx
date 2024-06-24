@@ -16,7 +16,7 @@ export default function Category() {
         {data
           .filter((item) => item.category === category)
           .map((item) => (
-            <CategoryCard key={item.name} product={item} />
+            <CategoryCard key={item.id} product={item} />
           ))}
       </main>
       <aside className="container mb-[var(--spacing-l)] md:mb-[var(--spacing-xl)]">
