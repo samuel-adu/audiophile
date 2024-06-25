@@ -34,6 +34,22 @@
   color: var(--clr-primary-400);
 }
 
+.cart-icon-div {
+  position: relative;
+}
+
+.cart-icon-div span {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background-color: var(--clr-primary-400);
+  padding: 0.125rem 0.75rem;
+  border-radius: 1.5rem;
+  font-size: var(--text-xs);
+  color: var(--clr-neutral-400);
+  font-weight: 600;
+}
+
 @media (min-width: 680px) {
   .nav {
     padding-inline: 2.5rem;
