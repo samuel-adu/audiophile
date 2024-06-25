@@ -1,11 +1,13 @@
+import PropType from 'prop-types';
 import '../../styles/cart.css';
 import { Link } from 'react-router-dom';
 import CartItem from './CartItem';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearCart, updateTotals } from './cartSlice';
+import toast from 'react-hot-toast';
 
 function Cart({ setOpenCart }) {
-  const { cartItems, numberOfItems, cartTotal } = useSelector(
+  const { cartItems, cartTotal, numberOfProducts } = useSelector(
     (state) => state.cart
   );
   const dispatch = useDispatch();
@@ -13,6 +15,7 @@ function Cart({ setOpenCart }) {
   function handleRemoveAll() {
     dispatch(clearCart());
     dispatch(updateTotals());
+    toast.error('item removed from cart');
   }
 
   if (cartTotal === 0) {
@@ -26,7 +29,7 @@ function Cart({ setOpenCart }) {
   return (
     <div className="cart">
       <div className="cart-header">
-        <h4 className="cart-heading heading-6">cart ({numberOfItems})</h4>
+        <h4 className="cart-heading heading-6">cart ({numberOfProducts})</h4>
         <button className="base-text remove-all-btn" onClick={handleRemoveAll}>
           Remove all
         </button>
@@ -40,7 +43,7 @@ function Cart({ setOpenCart }) {
 
       <div className="cart-summary">
         <p className="base-text">TOTAL</p>
-        <p className="heading-6">{`$${cartTotal}`}</p>
+        <p className="heading-6">{`$${cartTotal.toLocaleString()}`}</p>
       </div>
 
       <Link
@@ -53,5 +56,9 @@ function Cart({ setOpenCart }) {
     </div>
   );
 }
+
+Cart.propTypes = {
+  setOpenCart: PropType.func,
+};
 
 export default Cart;

@@ -8,6 +8,7 @@ import { getCategory } from '../utils/getCategory';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addItemToCart, updateTotals } from '../features/cart/cartSlice';
+import toast from 'react-hot-toast';
 
 function ProductDetail() {
   const navigate = useNavigate();
@@ -31,6 +32,7 @@ function ProductDetail() {
   function addTo() {
     dispatch(addItemToCart({ id, quantity }));
     dispatch(updateTotals());
+    toast.success('item added to cart');
   }
 
   return (
@@ -86,10 +88,7 @@ function ProductDetail() {
                   +
                 </button>
               </div>
-              <button
-                className="btn btn--primary"
-                onClick={addTo}
-              >
+              <button className="btn btn--primary" onClick={addTo}>
                 add to cart
               </button>
             </div>

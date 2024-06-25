@@ -11,6 +11,10 @@
   border-radius: 0.5rem;
 }
 
+.checkout-form h3 {
+  margin-bottom: var(--spacing-s);
+}
+
 .form-legend {
   margin-bottom: 1rem;
 }
@@ -48,6 +52,10 @@
   padding: var(--spacing-base);
   background-color: var(--clr-neutral-100);
   border-radius: 0.5rem;
+}
+
+.checkout-summary h6 {
+  margin-bottom: var(--spacing-base);
 }
 
 @media (min-width: 1024px) {
