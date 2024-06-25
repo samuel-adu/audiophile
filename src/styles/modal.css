@@ -6,22 +6,26 @@
   right: 0;
   bottom: 0;
   left: 0;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   z-index: 100;
 }
 
-.modal-container {
+.modal-content {
   background-color: var(--clr-neutral-100);
   padding: var(--spacing-base);
   width: 90%;
   max-width: 540px;
   border-radius: 0.5rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media (min-width: 680px) {
-  .modal-container {
+  .modal-content {
     padding: 2rem;
   }
 }

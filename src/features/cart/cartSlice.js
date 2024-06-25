@@ -4,6 +4,7 @@ import { data } from '../../productList';
 const initialState = {
   cartItems: [],
   numberOfItems: 0,
+  numberOfProducts: 0,
   cartTotal: 0,
   grandTotal: 0,
   vat: 0,
@@ -47,24 +48,12 @@ export const cartSlice = createSlice({
         (count, item) => count + item.quantity,
         0
       );
+      state.numberOfProducts = state.cartItems.length;
       state.grandTotal = state.cartTotal + 50;
       state.vat = state.cartTotal * 0.2;
     },
   },
 });
-
-// function updatedTotals(state) {
-//   state.cartTotal = state.cartItems.reduce(
-//     (total, state) => total + state.item.price * state.item.quantity,
-//     0
-//   );
-//   state.numberOfItems = state.cartItems.reduce(
-//     (total, item) => total + item.quantity,
-//     0
-//   );
-//   state.grandTotal = state.cartTotal + 50;
-//   state.vat = state.cartTotal * 0.2;
-// }
 
 export const {
   clearCart,
