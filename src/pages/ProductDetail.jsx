@@ -1,6 +1,7 @@
 import About from '../components/About';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { getImageUrl } from '../utils/getImageUrl';
+import { HiPlus, HiMinus } from 'react-icons/hi';
 import Menu from '../components/Menu';
 import data from '../data.json';
 import '../styles/productDetail.css';
@@ -76,16 +77,18 @@ function ProductDetail() {
                   onClick={() => {
                     quantity > 1 && setQuantity((prev) => prev - 1);
                   }}
-                  className="order-btn"
+                  className={`order-btn ${
+                    quantity === 1 ? 'btn-disabled' : ''
+                  }`}
                 >
-                  -
+                  <HiMinus />
                 </button>
                 <p className="order-count">{quantity}</p>
                 <button
                   onClick={() => setQuantity((prev) => prev + 1)}
                   className="order-btn"
                 >
-                  +
+                  <HiPlus />
                 </button>
               </div>
               <button className="btn btn--primary" onClick={addTo}>

@@ -1,4 +1,5 @@
 import PropType from 'prop-types';
+import { HiTrash, HiPlus, HiMinus } from 'react-icons/hi';
 import { useDispatch } from 'react-redux';
 import {
   incrementItemQuantity,
@@ -39,11 +40,11 @@ function CartItem({ item }) {
 
       <div className="order-count-tab order-count-tab--small">
         <button className="order-btn" onClick={handleQuantityReduction}>
-          -
+          {quantity === 1 ? <HiTrash /> : <HiMinus />}
         </button>
         <p className="order-count">{quantity}</p>
         <button className="order-btn" onClick={handleQuantityIncrement}>
-          +
+          <HiPlus />
         </button>
       </div>
     </div>
