@@ -42,8 +42,8 @@ function Navbar({ setOpenCart }) {
         </ul>
 
         <div className="cart-icon-div">
-          {numberOfItems && <span>{numberOfItems}</span>}
-          <button onClick={() => setOpenCart(true)}>
+          <button className="cart-btn" onClick={() => setOpenCart(true)}>
+            {numberOfItems ? <span>{numberOfItems}</span> : null}
             <img className="cart-icon" src={cart} alt="" />
           </button>
         </div>
